@@ -1,4 +1,4 @@
-  /* ── Reset & Tokens ─────────────────────────────────────── */
+ /* ── Reset & Tokens ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -69,7 +69,6 @@
       gap: 6px;
       text-decoration: none;
     }
-
     .logo-word {
       font-family: var(--font-display);
       font-size: 22px;
@@ -122,15 +121,6 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 56px 24px 40px;
-    }
-
-    .hero-eyebrow {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 14px;
     }
 
     .hero-headline {
@@ -214,6 +204,43 @@
       opacity: 0.6;
     }
 
+    .search-bar {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  padding: 0 24px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.18s;
+}
+
+.search-bar input:focus {
+  border-color: var(--accent);
+}
+
+.search-bar button {
+  padding: 10px 22px;
+  border-radius: 99px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
     /* ── Divider ─────────────────────────────────────────────── */
     .section-divider {
       max-width: 1200px;
@@ -266,6 +293,22 @@
       transition: border-color var(--transition), transform var(--transition);
       cursor: pointer;
     }
+    
+    .news-card {
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
     .news-card:hover {
       border-color: var(--accent);
